@@ -2,6 +2,7 @@ package com.vanzh.dialogdemo.net
 
 import com.vanzh.wlha_kt.model.Account
 import com.vanzh.wlha_kt.model.TokenInfo
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.Body
@@ -19,7 +20,7 @@ interface ApiService {
      * 用户登录
      */
     @POST("Accounts/login")
-    fun login(@Body account: Account): Single<Response<TokenInfo>>
+    fun login(@Body account: Account): Observable<Response<TokenInfo>>
 
 
 }
